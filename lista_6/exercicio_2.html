@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+</head>
+<body>
+    <h2>Conversor de Temperatura</h2>
+
+    <label for="fahrenheitInput">Cateto A:</label>
+    <input type="number" id="catetoA">
+    <label for="fahrenheitInput">Cateto B:</label>
+    <input type="number" id="catetoB">
+    <button onclick="calcularHipotenusa()">Calcular</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularHipotenusa(){
+            var catetoA = parseFloat(document.getElementById("catetoA").value);
+            var catetoB = parseFloat(document.getElementById("catetoB").value);
+            var hipotenusa = (catetoA ** 2) + (catetoB ** 2)
+            document.getElementById("resultado").innerText = `Hipotenusa: ${Math.sqrt(hipotenusa)}` ;
+        }
+    </script>
+</body>
+</html>
