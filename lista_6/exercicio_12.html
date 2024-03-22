@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>É positivo ou negativo?</title>
+</head>
+<body>
+    <h2>É positivo ou negativo?</h2>
+    <button onclick="verificarPosNeg()">Calcular</button>
+    <p id="numeros"></p>
+    <p id="resultado"></p>
+
+    <script>
+        function verificarPosNeg(){
+            let numerosAleatorios = [];
+            for (let i = 0; i < 20; i++) {
+                let numeroAleatorio = Math.floor(Math.random() * (200) - 100);
+                numerosAleatorios.push(numeroAleatorio);
+            }
+
+            let positivos = 0;
+            let negativos = 0;
+
+            for (let i = 0; i < numerosAleatorios.length; i++) {
+                if (numerosAleatorios[i] > 0) {
+                    positivos++;
+                } else if (numerosAleatorios[i] < 0) {
+                    negativos++;
+                }
+            }
+            document.getElementById("numeros").innerText = `${numerosAleatorios}`;
+            document.getElementById("resultado").innerText = `Positivos: ${positivos}, Negativos: ${negativos}`;
+        }
+    </script>
+</body>
+</html>

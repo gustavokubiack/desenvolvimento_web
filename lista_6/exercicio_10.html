@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior valor entre dois números</title>
+</head>
+<body>
+    <h2>Maior valor entre dois números</h2>
+    <label for="">Número 1</label>
+    <input type="number" id="num1">
+    <label for="">Número 2</label>
+    <input type="number" id="num2">
+    <button onclick="maiorNum()">Calcular</button>
+    <p id="resultado"></p>
+
+    <script>
+        function maiorNum(){
+            let num1 = parseFloat(document.getElementById("num1").value)
+            let num2 = parseFloat(document.getElementById("num2").value)
+             
+            let resultado
+            if (num1 == num2){
+                alert("Números iguais")
+                return
+            }
+            if (num1 > num2){
+                resultado = num1
+            } else{
+                resultado = num2
+            }
+
+            document.getElementById("resultado").innerText = `Maior número: ${resultado}`
+        }
+    </script>
+</body>
+</html>

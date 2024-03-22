@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantos dias para completar o jogo</title>
+</head>
+<body>
+    <h2>Quantos dias para completar o jogo</h2>
+    <label for="">Quantas horas você pode jogar por dia? </label>
+    <input type="number" id="num">
+    <button onclick="zerarJogo()">Calcular</button>
+    <p id="resultado"></p>
+    <script>
+        function zerarJogo(){
+            let num = parseFloat(document.getElementById("num").value)
+            if (num > 24){
+                alert("Número tem que ser menor que 24 horas por dia")
+                return
+            }
+            let resultado = 78 / num
+            document.getElementById("resultado").innerText = `Quantidade de dias: ${resultado}`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma do intervalo</title>
+</head>
+<body>
+    <h2>Soma do intervalo</h2>
+    <label for="">Número 1</label>
+    <input type="number" id="numero1">
+    <label for="">Número 2</label>
+    <input type="number" id="numero2">
+    <button onclick="somaIntervalo()">Calcular</button>
+    <p id="resultado"></p>
+    <script>
+        function somaIntervalo(){
+            let num1 = parseFloat(document.getElementById("numero1").value)
+            let num2 = parseFloat(document.getElementById("numero2").value)
+            let intervalo = []
+            while (num1 <= num2){
+                intervalo.push(num1)
+                num1 = num1 + 1
+            }
+            document.getElementById("resultado").innerText = `Intervalo ${intervalo}`
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descobrir mês</title>
+</head>
+<body>
+    <h2>Descobrir mês</h2>
+    <select name="" id="mes">
+        <option value="" selected>Selecione um número</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+    </select>
+    <button onclick="encontrarMes()">Calcular</button>
+    <p id="resultado"></p>
+    <script>
+        function encontrarMes(){
+            let mes = parseFloat(document.getElementById("mes").value)
+            const mesesDoAno = {
+                1: "Janeiro",
+                2: "Fevereiro",
+                3: "Março",
+                4: "Abril",
+                5: "Maio",
+                6: "Junho",
+                7: "Julho",
+                8: "Agosto",
+                9: "Setembro",
+                10: "Outubro",
+                11: "Novembro",
+                12: "Dezembro"
+            };
+            if (isNaN(mes)){
+                alert("O mês não pode ser em branco!")
+                return
+            }
+            document.getElementById("resultado").innerText = `Mês escolhido: ${mesesDoAno[mes]}`
+
+        }
+    </script>
+</body>
+</html>
