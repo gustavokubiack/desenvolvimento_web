@@ -7,5 +7,25 @@
 </head>
 <body>
     <h2>Calcular média das notas</h2>
+    <label for="">Nota 1</label>
+    <input type="number" id="nota1">
+    <label for="">Nota 2</label>
+    <input type="number" id="nota2">
+    <button onclick="calcularNota()">Calcular</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularNota(){
+            let nota1 = parseFloat(document.getElementById("nota1").value)
+            let nota2 = parseFloat(document.getElementById("nota2").value)
+            let media = (nota1 + nota2) / 2
+            if (media >= 7){
+                document.getElementById("resultado").innerText = `Parabéns você foi aprovado :) Média ${media}`
+            } else {
+                document.getElementById("resultado").innerText = `Infelizmente você não foi aprovado :( Média ${media}`
+            }
+
+        }
+    </script>
 </body>
 </html>

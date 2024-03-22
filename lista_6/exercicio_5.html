@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular forma geométrica</title>
+</head>
+<body>
+    <h2>Calcular forma geométrica</h2>
+    <label for="">Número de lados</label>
+    <input type="number" id="numLados">
+    <label for="">Medida (cm)</label>
+    <input type="number" id="medida">
+
+    <button onclick="CalcularFigura()">Calcular</button>
+    <p id="resultado"></p>
+
+    <script>
+        function CalcularFigura(){
+            document.getElementById("resultado").innerText = ""
+            let numLados = parseFloat(document.getElementById("numLados").value)
+            let medida = document.getElementById("medida").value
+
+            let list = [3, 4, 5]
+            if (!list.includes(numLados)){
+                alert("Número de lados não disponível!")
+            }
+
+            switch (numLados){
+                case 3:
+                    let perimetro = medida * 3
+                    document.getElementById("resultado").innerText += ` Triângulo - Perímetro ${perimetro.toFixed(2)} cm`
+                    break
+
+                    case 4:
+                    let area = medida * medida
+                    document.getElementById("resultado").innerText += ` Quadrado - Área: ${area.toFixed(2)} cm`
+                    break
+
+                case 5:
+                    document.getElementById("resultado").innerText += "Pentágono"
+                    break
+
+                }
+
+        }
+    </script>
+</body>
+</html>
